@@ -39,9 +39,9 @@ The project uses the standard **California Housing Dataset** (`sklearn.datasets.
   - **Validation Set:** `1,652` samples (`8%`)
   - **Testing Set:** `4,128` samples (`20%`)
 
-![Missing Values Check](Screenshot%202026-10-18%20035500.png)
+![Missing Values Check](01_missing_values_check.png)
 
-![Train Validation Test Split](Screenshot%202026-10-18%20035540.png)
+![Train Validation Test Split](02_train_val_test_split.png)
 
 ---
 
@@ -55,7 +55,7 @@ Built a 7-layer Fully Connected Neural Network using the Keras `Sequential` API:
 - **Output Layer:** `Dense(1, activation='relu')`
 - **Total Trainable Parameters:** `5,592`
 
-![Model Architecture Summary](Screenshot%202026-10-18%20035559.png)
+![Model Architecture Summary](03_model_architecture_summary.png)
 
 ---
 
@@ -65,9 +65,9 @@ Built a 7-layer Fully Connected Neural Network using the Keras `Sequential` API:
 - **Evaluation Metric:** Mean Absolute Error (`mae`)
 - **Training Configuration:** `100` Epochs | `Batch Size = 128`
 
-![Model Compilation](Screenshot%202026-10-18%20035620.png)
+![Model Compilation](04_model_compilation.png)
 
-![Training Progress](Screenshot%202026-10-18%20035722.png)
+![Training Progress](05_training_history_logs.png)
 
 ---
 
@@ -76,7 +76,7 @@ Built a 7-layer Fully Connected Neural Network using the Keras `Sequential` API:
 ### Training vs. Validation Curves
 The model rapidly converges within the first 20 epochs and maintains stable training and validation loss/MAE across 100 epochs:
 
-![Learning Curves](download.png)
+![Learning Curves](06_learning_curves.png)
 
 ### Test Set Performance Metrics
 | Metric | Score |
@@ -86,7 +86,7 @@ The model rapidly converges within the first 20 epochs and maintains stable trai
 | **Root Mean Squared Error (RMSE)** | `0.5269` |
 | **$R^2$ Score** | **`0.7939` (~79.4%)** |
 
-![Evaluation Metrics and Predictions](Screenshot%202026-10-18%20035827.png)
+![Evaluation Metrics and Predictions](07_evaluation_and_predictions.png)
 
 ---
 

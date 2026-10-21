@@ -22,7 +22,7 @@ The project uses the **Breast Cancer Wisconsin Dataset** (`sklearn.datasets.load
   - **`0` (Malignant):** `212` samples (`37.26%`)
 
 ### Class Distribution
-![Diagnosis Class Distribution](download%20(2).png)
+![Diagnosis Class Distribution](01_class_distribution.png)
 
 ---
 
@@ -32,7 +32,7 @@ The project uses the **Breast Cancer Wisconsin Dataset** (`sklearn.datasets.load
 - **Duplicate Rows:** Verified `0` duplicate rows across the dataset.
 - **Missing Values:** Verified `0` null/missing values across all 30 features and target column.
 
-![Missing Values Heatmap](download.png)
+![Missing Values Heatmap](02_missing_values_heatmap.png)
 
 ### 2. Feature Scaling & Stratified Splitting
 - **Standardization:** Scaled all 30 input features using `StandardScaler` (`mean = 0`, `std = 1`).
@@ -64,7 +64,7 @@ Built a Feedforward Neural Network using the Keras `Sequential` API:
 ### Training vs. Validation Learning Curves
 The model achieves high training and validation accuracy early in training with smooth loss convergence:
 
-![Learning Curves](download%20(1).png)
+![Learning Curves](03_learning_curves.png)
 
 ---
 
@@ -79,7 +79,7 @@ On the unseen test set (`114` samples), the model achieved **98% overall accurac
 | **Macro Avg** | `0.99` | `0.98` | `0.98` | `114` |
 | **Weighted Avg** | `0.98` | `0.98` | `0.98` | `114` |
 
-![Classification Report](Screenshot%202026-10-21%20081211.png)
+![Classification Report](04_classification_report.png)
 
 ---
 
@@ -88,7 +88,7 @@ Out of `114` test samples, the model correctly classified **`112` samples** (`40
 
 | Raw Confusion Matrix | Normalized Confusion Matrix |
 | :---: | :---: |
-| ![Confusion Matrix](download%20(3).png) | ![Normalized Confusion Matrix](download%20(4).png) |
+| ![Confusion Matrix](05_confusion_matrix.png) | ![Normalized Confusion Matrix](06_normalized_confusion_matrix.png) |
 
 ---
 
