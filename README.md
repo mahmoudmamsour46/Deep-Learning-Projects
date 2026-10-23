@@ -15,6 +15,7 @@ Welcome to my **Deep Learning Projects** repository! This repository serves as a
 | :-: | :--- | :---: | :--- | :--- | :--- |
 | **01** | [**California Housing Price Prediction**](./California%20Housing%20Regression) | 📈 Regression | California Housing (`20,640` samples, `8` features) | 7-Layer Sequential MLP (`ReLU`) | **$R^2 = 79.4\%$** (`MAE = 0.3502`, `RMSE = 0.5269`) |
 | **02** | [**Breast Cancer Wisconsin Classification**](./Breast%20Cancer%20Classification) | 🩺 Binary Classification | Breast Cancer Wisconsin (`569` samples, `30` features) | 3-Layer Sequential MLP (`ReLU` + `Sigmoid`) | **Accuracy = $98.25\%$** (`F1 = 0.98`, `Recall (Benign) = 1.00`) |
+| **03** | [**TinyML Audio Digits Recognition on STM32**](https://github.com/mahmoudmamsour46/TinyML-Audio-Digits-Recognition-STM32) | 🎙️ TinyML / Edge Audio | Google Speech Commands (`0–9`) | 3-Layer CNN (`40,812` params) + Linear & PoT PTQ | **Accuracy = $85.03\%$**, **Flash = $45.4\text{ KB}$**, **RAM = $18.8\text{ KB}$**, **Latency = $208\text{ ms}$** |
 
 ---
 
@@ -33,6 +34,15 @@ Welcome to my **Deep Learning Projects** repository! This repository serves as a
 - **Workflow:** Exploratory data analysis, class balance inspection, `StandardScaler` preprocessing, stratified Train/Test split (`80% / 20%`), 3-layer `Sequential` MLP trained with `Adam` and `binary_crossentropy` loss over 100 epochs.
 - **Results:** Achieved **`98.25%` Test Accuracy** (`112/114` correct), `1.00` Precision on Malignant cases, and `1.00` Recall on Benign cases.
 - 👉 [**View Project Folder & Documentation**](./Breast%20Cancer%20Classification/README.md)
+
+---
+
+### 3. [🎙️ TinyML Audio Digits Recognition on STM32](https://github.com/mahmoudmamsour46/TinyML-Audio-Digits-Recognition-STM32)
+- **Objective:** Practical implementation and edge deployment of the speech digit recognition CNN from the Elsevier (2022) paper onto an **STM32F401 (ARM Cortex-M4)** microcontroller.
+- **Quantization Experiments:** Implemented and compared both **True Integer Linear Quantization** and **Power-of-Two (PoT) Bit-Shift Quantization** for zero-multiplication integer arithmetic.
+- **Memory & Edge Optimization:** Reduced Flash from **161.4 KB down to 45.4 KB** (3.6x savings) and limited SRAM to **18.8 KB Peak RAM** using Ping-Pong activation buffers (enabling deployment on the 64 KB RAM microcontroller).
+- **Physical Hardware Metrics:** Verified live hardware inference with **~208 ms latency**, **85.03% Top-1 Accuracy** (matching the paper's reported ~85%), and direct output to a 7-segment display.
+- 🔗 [**View Full Dedicated Repository & Embedded C Code**](https://github.com/mahmoudmamsour46/TinyML-Audio-Digits-Recognition-STM32)
 
 ---
 
